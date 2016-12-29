@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app = 'DIApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <title>JHU AngularJS</title>
+  </head>
+  <body>
+    <h1>Dependency Injection in javascript
+      (and AngularJS)</h1>
+      <div ng-controller = 'DIController'>
+        <input type="text"
+        ng-model = "name"
+        ng-blur = "upper();">
+
+
+        <button ng-click="beatAmy()">Beat Amy</button>
+        <br>
+        <img ng-src="images/amy_{{stateOfBeing}}.jpeg">
+
+      </div>
+
+
+  </body>
+</html>
