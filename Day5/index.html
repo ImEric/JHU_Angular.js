@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="DigestCycles">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello Coursera!</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/filter.js"></script>
+  </head>
+  <body>
+    <h1>ng-repeat and filtered ng-repeat</h1>
+    <div ng-controller='DCController'>
+      <div>
+        <input type="text" ng-model="search" placeholder="search">
+      </div>
+      <div>
+        <ul>
+          <li ng-repeat="item in itemList | filter: search">{{item.Name}} is {{item.Age}} years old</li>
+        </ul>
+      </div>
+      <div>
+        <input type="text" ng-model="newItemName" placeholder="name">
+        <br>
+        <input type="text" ng-model="newItemAge" placeholder="age" ng-keypress="enterPressed($event)">
+        <br>
+        <button ng-click="addToList()">Add to list</button>
+      </div>
+    </div>
+  </body>
+</html>
